@@ -1,0 +1,60 @@
+<com.vaibhav.gallery.collectiondb.store.tool.NestedScrollCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ExploreFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/mAppBar"
+        android:background="@android:color/transparent"
+        >
+        <FrameLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collections"
+                android:textSize="20dp"
+                android:layout_gravity="center|start"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+
+                ></TextView>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:src="@drawable/add"
+                android:id="@+id/newCollection"
+                android:layout_margin="10dp"
+                android:background="?attr/actionBarItemBackground"
+                ></ImageButton>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:src="@drawable/sort"
+                android:id="@+id/sort"
+
+                android:layout_marginEnd="80dp"
+                android:background="?attr/actionBarItemBackground"
+                ></ImageButton>
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mRecycle"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        ></androidx.recyclerview.widget.RecyclerView>
+</com.vaibhav.gallery.collectiondb.store.tool.NestedScrollCoordinatorLayout>

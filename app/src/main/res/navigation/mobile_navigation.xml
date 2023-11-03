@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/photo">
+
+    <fragment
+        android:id="@+id/photo"
+        android:name="com.vaibhav.gallery.ui.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" />
+
+    <fragment
+        android:id="@+id/album"
+        android:name="com.vaibhav.gallery.ui.AlbumFragment"
+        android:label="album"
+        tools:layout="@layout/fragment_album" />
+
+    <fragment
+        android:id="@+id/liked"
+        android:name="com.vaibhav.gallery.ui.LikedFragment"
+        android:label="Liked"
+        tools:layout="@layout/fragment_liked" />
+
+    <fragment
+        android:id="@+id/video"
+        android:name="com.vaibhav.gallery.ui.VideoFragment"
+        android:label="video"
+        tools:layout="@layout/fragment_video" />
+
+
+
+</navigation>

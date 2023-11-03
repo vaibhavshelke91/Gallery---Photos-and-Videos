@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/topHeader"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="20dp"
+            android:text="@string/save"
+            android:id="@+id/save"
+            app:icon="@drawable/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            ></com.google.android.material.button.MaterialButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:id="@+id/back"
+            android:background="?attr/actionBarItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="20dp"
+            ></ImageButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+   android:background="@color/black"
+    app:layout_constraintTop_toBottomOf="@id/topHeader"
+    app:layout_constraintBottom_toTopOf="@id/bottomHeader"
+    android:id="@+id/mPhotoEditor"
+    ></ImageView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomHeader"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            <LinearLayout
+               android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/hLinear">
+
+
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/crop"
+                    android:src="@drawable/crop"
+                    android:layout_weight="1"
+                    ></ImageView>
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/adjust"
+                    android:src="@drawable/adjust"
+                    android:layout_weight="1"
+                    ></ImageView>
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:id="@+id/draw"
+                        android:src="@drawable/brush"
+                        android:layout_weight="1"
+                        ></ImageView>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

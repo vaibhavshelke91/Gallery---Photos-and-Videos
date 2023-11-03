@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mCard"
+    app:cardCornerRadius="10dp"
+    style="@style/Widget.Material3.CardView.Filled"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.vaibhav.gallery.collectiondb.store.tool.DynamicImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:id="@+id/img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:transitionName="full"
+            ></com.vaibhav.gallery.collectiondb.store.tool.DynamicImageView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/img"
+            app:layout_constraintBottom_toBottomOf="@id/img"
+            app:layout_constraintTop_toTopOf="@id/img"
+            app:layout_constraintEnd_toEndOf="@id/img"
+            android:id="@+id/mView"
+            android:background="@drawable/t_shape"
+            android:visibility="gone"
+            ></View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mCard"
+            android:text="title"
+            android:id="@+id/title"
+            android:layout_margin="5dp"
+            android:textSize="12dp"
+
+            android:textStyle="bold"
+            android:maxLines="2"
+            ></TextView>
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_alignBottom="@id/mCard"
+        android:layout_alignEnd="@id/mCard"
+        android:layout_margin="15dp"
+        android:id="@+id/mCheckBox"
+        android:clickable="false"
+        android:visibility="gone"
+        ></com.google.android.material.checkbox.MaterialCheckBox>
+    </RelativeLayout>

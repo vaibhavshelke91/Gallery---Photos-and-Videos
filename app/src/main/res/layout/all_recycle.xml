@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    style="@style/Widget.Material3.CardView.Elevated"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/gridImage"
+        android:transitionName="full"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        ></ImageView>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/gridImage"
+        app:layout_constraintBottom_toBottomOf="@id/gridImage"
+        app:layout_constraintStart_toStartOf="@id/gridImage"
+        app:layout_constraintEnd_toEndOf="@id/gridImage"
+        android:id="@+id/mView"
+        android:background="@drawable/t_shape"
+        android:visibility="gone"
+        ></View>
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="@id/gridImage"
+        app:layout_constraintEnd_toEndOf="@id/gridImage"
+        android:id="@+id/mCheckBox"
+        android:clickable="false"
+        android:visibility="gone"
+        ></com.google.android.material.checkbox.MaterialCheckBox>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

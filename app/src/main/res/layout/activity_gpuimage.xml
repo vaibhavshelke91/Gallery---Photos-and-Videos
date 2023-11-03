@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editor.GPUImageActivity">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="80dp"
+       android:id="@+id/topHeader"
+       app:layout_constraintTop_toTopOf="parent"
+       >
+
+      <com.google.android.material.button.MaterialButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_marginEnd="20dp"
+          android:text="Save"
+          android:id="@+id/save"
+          app:icon="@drawable/save"
+          app:layout_constraintBottom_toBottomOf="parent"
+          ></com.google.android.material.button.MaterialButton>
+      <ImageButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/back"
+          android:id="@+id/back"
+          android:background="?attr/actionBarItemBackground"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_marginStart="20dp"
+          ></ImageButton>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+   <android.opengl.GLSurfaceView
+
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+
+       app:layout_constraintTop_toBottomOf="@id/topHeader"
+      app:layout_constraintBottom_toTopOf="@id/bottomHeader"
+       android:id="@+id/surface_view"
+       ></android.opengl.GLSurfaceView>
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/bottomHeader"
+       app:layout_constraintBottom_toBottomOf="parent"
+       >
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:id="@+id/filterSection"
+
+          app:layout_constraintTop_toTopOf="parent"
+          >
+
+         <com.google.android.material.slider.Slider
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             android:layout_marginStart="20dp"
+             android:layout_marginEnd="20dp"
+             android:id="@+id/filterSlider"
+             ></com.google.android.material.slider.Slider>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:id="@+id/fliterRecycle"
+           app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/filterSlider"
+             ></androidx.recyclerview.widget.RecyclerView>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

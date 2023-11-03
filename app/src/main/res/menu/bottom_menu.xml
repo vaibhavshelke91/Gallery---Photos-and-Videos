@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/photo"
+        android:title="@string/picture"
+        android:icon="@drawable/photo"
+        ></item>
+
+    <item android:id="@+id/album"
+        android:title="@string/albums"
+        android:icon="@drawable/album"
+        ></item>
+
+
+
+    <item android:id="@+id/liked"
+        android:title="@string/liked"
+        android:icon="@drawable/fav_filled"
+        ></item>
+
+    <item android:id="@+id/video"
+        android:title="@string/videos"
+        android:icon="@drawable/video"
+        ></item>
+</menu>

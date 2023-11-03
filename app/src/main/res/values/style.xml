@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="NavigationDrawerTheme" parent="Widget.Material3.NavigationView">
+    <item name="android:fontFamily">@font/font_one</item>
+</style>
+    <style name="RegularFontStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/font_one</item>
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="100dp"
+        android:id="@+id/imgCard"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.Material3.CardView.Filled"
+        app:cardCornerRadius="100dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/img"
+            ></ImageView>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Akole"
+        android:id="@+id/locationName"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@id/imgCard"
+        app:layout_constraintEnd_toEndOf="@id/imgCard"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imgCard"
+        android:layout_marginTop="5dp"
+        ></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

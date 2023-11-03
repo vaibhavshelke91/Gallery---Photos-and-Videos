@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+
+    <com.google.android.material.search.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/search_your_gallery"
+        android:id="@+id/searchView"
+        android:transitionName="search"
+        android:focusedByDefault="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+      <com.google.android.material.chip.ChipGroup
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:singleLine="true"
+          android:paddingStart="10dp"
+          app:chipSpacing="10dp"
+          style="@style/Widget.Material3.Chip.Filter"
+          android:id="@+id/chipGroup"
+          app:singleSelection="true"
+          >
+          <com.google.android.material.chip.Chip
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/name"
+              android:checked="true"
+              android:id="@+id/name"
+              style="@style/Widget.Material3.Chip.Filter"
+              ></com.google.android.material.chip.Chip>
+
+          <com.google.android.material.chip.Chip
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/albums"
+              android:id="@+id/album"
+              style="@style/Widget.Material3.Chip.Filter"
+              ></com.google.android.material.chip.Chip>
+          <com.google.android.material.chip.Chip
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/videos"
+              android:id="@+id/video"
+              style="@style/Widget.Material3.Chip.Filter"
+              ></com.google.android.material.chip.Chip>
+      </com.google.android.material.chip.ChipGroup>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sRecycle"
+            android:layout_below="@id/chipGroup"
+            ></androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contentText"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="No Search Result Found !"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textStyle="bold"
+            ></TextView>
+    </com.google.android.material.search.SearchView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

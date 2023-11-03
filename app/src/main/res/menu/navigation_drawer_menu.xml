@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/firstMenu"
+        android:title="@string/grid_size"
+
+        >
+
+        <menu>
+            <group android:checkableBehavior="single">
+            <item android:id="@+id/double_grid"
+                android:icon="@drawable/grid"
+                android:title="@string/two_column"
+               android:checkable="true"
+                app:showAsAction="ifRoom"
+
+                ></item>
+           <item android:id="@+id/triple_grid"
+               android:icon="@drawable/grid"
+               android:title="@string/three_column"
+               android:checkable="true"
+               app:showAsAction="ifRoom"
+               ></item>
+            </group>
+            <item
+                android:id="@+id/titles"
+                android:checkable="false"
+                android:icon="@drawable/subtitle"
+                android:title="@string/show_titles"
+                app:actionViewClass="com.vaibhav.gallery.collectiondb.store.tool.ShowCaseCheckBox"
+                app:showAsAction="ifRoom|withText" />
+        </menu>
+    </item>
+    <item android:id="@+id/second_menu"
+        android:title="@string/general"
+        >
+
+        <menu>
+            <item android:title="@string/open_camera"
+                android:icon="@drawable/camera_outlined"
+                app:showAsAction="ifRoom"
+                android:checkable="false"
+                android:id="@+id/camera"
+                ></item>
+            <item android:title="@string/about"
+                android:icon="@drawable/info"
+                app:showAsAction="ifRoom"
+                android:checkable="false"
+                android:id="@+id/about"
+                ></item>
+        </menu>
+    </item>
+</menu>
